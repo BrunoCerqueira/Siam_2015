@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+<ui:composition template="/template/templatePadrao.xhtml">
+
+	<ui:define name="corpo">
+		<h:form id="idFormIndex">
+			<p:spacer></p:spacer>
+			<h:panelGrid columns="1">
+
+
+
+			</h:panelGrid>
+			<div id="menu">
+				<h:panelGrid columns="1">
+					<h:panelGroup>
+						<h:outputText value="Nome:" />
+						<h:inputText value="#{logginMbean.user}" />
+					</h:panelGroup>
+
+					<h:panelGroup>
+						<h:outputText value="Senha:" />
+						<h:inputSecret value="#{logginMbean.senha}" />
+						
+						<h:commandButton id="idButtonConnectar" value="teste"
+							action="#{logginMbean.conectar()}" />
+						<p:growl id="growl" showDetail="true" sticky="true" />
+
+						<h:commandButton value="Entrar"
+							action="paginaPrincipalPaciente.xhtml" />
+					</h:panelGroup>
+				</h:panelGrid>
+			</div>
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>
+
+</html>

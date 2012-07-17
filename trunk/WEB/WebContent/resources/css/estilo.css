@@ -1,0 +1,61 @@
+html,body,#wrap {
+	height: 80%;
+}
+
+
+body>#wrap {
+	height: 200px;
+	min-height: 20%;
+	width: 600px; position: relative; left: 30%; margin-left: -300px;margin-top: 60px;
+	font-size: 40px;
+		background-color: menu; 
+	font-family:  serif;
+
+}
+.botaoCentral{
+	width: 300px !important;
+	 position: relative !important;
+
+	  margin-left: 500px !important;
+	  margin-top: 60px !important;
+
+
+.fonteMaior{
+	font-size: 50px !important;
+	white-space: pre !important;
+}
+.fonteMenor{
+	font-size: 8px !important;
+	white-space: pre !important;
+}
+.fonteMedia{
+	margin-left:100 !important; 
+	font-size: 20px !important;
+	white-space: pre !important;
+}
+.teste{
+	background-image:url('../imagens/Icones/medical-records1.jpg') !important;
+	background-color: silver !important;
+	
+}
+.teste2{
+	"margin-left: 28px !important"
+}
+#menu{
+	
+		 margin-left: 100px
+
+}
+#main {
+	padding-bottom: 88px;
+	height: 88px;
+	
+	
+} /* deve ser a mesma altura do rodapé */
+#footer {
+	position: relative;
+	margin-top: 70px;
+	/* A mesma altura do rodapé, o valor deve ser negativo */
+	height: 88px;
+	clear: both
+}

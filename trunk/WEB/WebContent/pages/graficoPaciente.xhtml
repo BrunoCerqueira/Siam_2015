@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="estilo.css" />
+</h:head>
+<body>
+
+	<h:form id="formGraficoPaciente">
+
+		<p:dataTable id="idDadosPaciente" var="paciente" 
+			value="#{historicoPacienteMbean.historicoFatoresRisco}">
+			<p:columnGroup type="header">
+				<p:row>
+					<p:column colspan="11" headerText="Dados atuais" />
+
+				</p:row>
+				<p:row>
+					<p:column rowspan="1" headerText="Peso" />
+					<p:column rowspan="1" headerText="Pressão" />
+					<p:column rowspan="1" headerText="Tabagista" />
+					<p:column rowspan="1" headerText="Alcool" />
+					<p:column rowspan="1" headerText="Exercícios" />
+					<p:column rowspan="1" headerText="Colesterol" />
+					<p:column rowspan="1" headerText="Diabetes" />
+					<p:column rowspan="1" headerText="Frutas" />
+					<p:column rowspan="1" headerText="Anticoncep.Oral" />
+					<p:column rowspan="1" headerText="Hipertenso" />
+					<p:column rowspan="1" headerText="ICM" />
+				</p:row>
+
+				<p:row>
+					<p:column rowspan="1" headerText="KG" />
+					<p:column rowspan="1" headerText="Sist/Diastólica" />
+					<p:column rowspan="1" headerText="Sim/Não" />
+					<p:column rowspan="1" headerText="Gramas/Dia" />
+					<p:column rowspan="1" headerText="Minutos/Dia" />
+					<p:column rowspan="1" headerText="MG/DL" />
+					<p:column rowspan="1" headerText="Sim/Não" />
+					<p:column rowspan="1" headerText="Gramas/Dia" />
+					<p:column rowspan="1" headerText="Sim/Não" />
+					<p:column rowspan="1" headerText="Sim/Não" />
+					<p:column rowspan="1" headerText="Massa/(Altura²)" />
+				</p:row>
+
+
+			</p:columnGroup>
+			<p:column headerText="Peso">
+
+				<h:outputText value="#{historicoPacienteMbean.ultimoPeso.valor}" />
+
+			</p:column>
+
+			<p:column headerText="Pressao">
+				<h:outputText value="#{historicoPacienteMbean.pressaoAtual}" />
+
+
+
+			</p:column>
+			<p:column headerText="Tabagista">
+				<h:outputText value="#{paciente.tabagista}" />
+			</p:column>
+
+			<p:column headerText="Alcool">
+
+				<h:outputText value="#{paciente.gramasAlcoolDia}" />
+			</p:column>
+
+
+			<p:column headerText="Atividade Fisica">
+
+				<h:outputText value="#{paciente.minutosAtividadeFisicaDia}" />
+			</p:column>
+
+
+			<p:column headerText="Colesterol">
+				<h:outputText value="#{paciente.colesterol}" />
+			</p:column>
+
+
+			<p:column headerText="Diabetes">
+
+				<h:outputText value="#{paciente.diabetico}" />
+			</p:column>
+
+
+			<p:column headerText="Frutas">
+
+				<h:outputText value="#{paciente.gramasFrutasDia}" />
+			</p:column>
+
+
+			<p:column headerText="Anticoncep. Oral" style="width:48%">
+
+				<h:outputText value="#{paciente.usoAnticonceptionalOral}" />
+			</p:column>
+
+			<p:column headerText="Hipertenso" style="width:48%">
+
+				<h:outputText value="#{paciente.hipertenso}" />
+			</p:column>
+
+			<p:column headerText="IMC" style="width:48%">
+
+				<h:outputText value="#{paciente.imc}" />
+
+			</p:column>
+
+
+
+
+		</p:dataTable>
+
+		<p:commandButton
+			rendered="#{historicoPacienteMbean.isMostraGrafico == false}"
+			update="formGraficoPaciente" value="historico"
+			icon="resources/imagens/medical_history_icon.jpg"
+			actionListener="#{historicoPacienteMbean.mostrarGrafico()}"
+			styleClass="botaoCentral" />
+		<p:commandButton
+			rendered="#{historicoPacienteMbean.isMostraGrafico == true}"
+			update="formGraficoPaciente" value="Esconder Historico"
+			icon="resources/imagens/medical_history_icon.jpg"
+			actionListener="#{historicoPacienteMbean.mostrarGrafico()}"
+			styleClass="botaoCentral" />
+
+
+
+		<p:spacer />
+
+
+		<p:fieldset id="panelGraficoHistoricoPesos" columns="1" legend="Peso"
+			rendered="#{historicoPacienteMbean.isMostraGrafico == true}">
+			<h:panelGrid columns="2">
+				<h:panelGroup>
+
+					<p:lineChart value="#{historicoPacienteMbean.graficoLinearPesos}"
+						legendPosition="ne" zoom="true" animate="true"
+						title="Grafico Linear" minY="0" maxY="150"
+						style="width:500px; margin-left: 100px !important"
+						widgetVar="chart" />
+				</h:panelGroup>
+				<p:barChart value="#{historicoPacienteMbean.graficoBarrasPesos}"
+					id="basic1" legendPosition="ne" title="Grafico de Barras" min="0"
+					max="150" style="width:500px;  margin-left: 100px !important"
+					animate="true" />
+
+			</h:panelGrid>
+
+		</p:fieldset>
+
+		<p:spacer height="10" />
+
+		<p:fieldset id="panelGraficoHistoricoPressao" columns="1"
+			legend="Pressão"
+			rendered="#{historicoPacienteMbean.isMostraGrafico == true}">
+			<h:panelGrid columns="2">
+				<h:panelGroup>
+
+					<p:lineChart value="#{historicoPacienteMbean.graficoLinearPressao}"
+						legendPosition="ne" zoom="true" animate="true"
+						title="Grafico Linear" minY="0" maxY="20"
+						style="width:500px; margin-left: 100px !important"
+						widgetVar="chart" />
+				</h:panelGroup>
+
+				<p:barChart value="#{historicoPacienteMbean.graficoBarrasPressao}"
+					id="basic2" legendPosition="ne" title="Grafico de Barras" min="0"
+					max="20" style="width:500px;  margin-left: 100px !important"
+					animate="true" />
+
+
+			</h:panelGrid>
+		</p:fieldset>
+
+	</h:form>
+</body>
+</html>
