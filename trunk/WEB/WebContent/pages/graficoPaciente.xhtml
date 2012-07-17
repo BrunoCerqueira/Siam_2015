@@ -114,6 +114,8 @@
 
 
 		</p:dataTable>
+		
+			<p:separator style="width:100%;height:2px"/>
 
 		<p:commandButton
 			rendered="#{historicoPacienteMbean.isMostraGrafico == false}"
@@ -129,7 +131,7 @@
 			styleClass="botaoCentral" />
 
 
-
+		
 		<p:spacer />
 
 
@@ -139,10 +141,11 @@
 				<h:panelGroup>
 
 					<p:lineChart value="#{historicoPacienteMbean.graficoLinearPesos}"
-						legendPosition="ne" zoom="true" animate="true"
+						legendPosition="se" zoom="true" animate="true"
 						title="Grafico Linear" minY="0" maxY="150"
 						style="width:500px; margin-left: 100px !important"
 						widgetVar="chart" />
+						
 				</h:panelGroup>
 				<p:barChart value="#{historicoPacienteMbean.graficoBarrasPesos}"
 					id="basic1" legendPosition="ne" title="Grafico de Barras" min="0"
@@ -162,12 +165,14 @@
 				<h:panelGroup>
 
 					<p:lineChart value="#{historicoPacienteMbean.graficoLinearPressao}"
-						legendPosition="ne" zoom="true" animate="true"
+						legendPosition="se" zoom="true" animate="true"
 						title="Grafico Linear" minY="0" maxY="20"
 						style="width:500px; margin-left: 100px !important"
 						widgetVar="chart" />
 				</h:panelGroup>
+				
 
+            
 				<p:barChart value="#{historicoPacienteMbean.graficoBarrasPressao}"
 					id="basic2" legendPosition="ne" title="Grafico de Barras" min="0"
 					max="20" style="width:500px;  margin-left: 100px !important"
