@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -11,6 +13,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "paciente", schema = "siam")
+@NamedQueries({		
+	@NamedQuery(name="Paciente.findByIdMedico", query="SELECT obj FROM Paciente obj WHERE obj.medico.id = :idMedico" )
+	
+	
+})
 public class Paciente extends Pessoa {
 	
 	@Column(name="nome_pai")
@@ -26,11 +33,23 @@ public class Paciente extends Pessoa {
 	@JoinColumn(name="idconvenio")
 	private Convenio convenio;
 	
+	@ManyToOne
+	@JoinColumn(name="fk_medico")
+	private Medico medico;
+	
 	@OneToOne
 	@JoinColumn(name="fk_fator_risc")
 	private HistoricoFatoresRisco historicoFatoresRisco;
 
 	
+	public Medico getMedico() {
+		return medico;
+	}
+
+	public void setMedico(Medico medico) {
+		this.medico = medico;
+	}
+
 	public Convenio getConvenio() {
 		return convenio;
 	}
