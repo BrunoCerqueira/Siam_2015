@@ -5,6 +5,8 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
+import org.primefaces.component.paginator.PaginatorElementRenderer;
+
 import service.PessoaService;
 import entity.Medico;
 import entity.Pessoa;
@@ -43,11 +45,8 @@ public class LogginMbean extends BaseBean {
 
 			if (this.user.equals(ADMINISTRADOR_USER)
 					&& this.senha.equals(ADMINISTRADOR_SENHA)) {
-				// TODO TELA DE ADMINISTRADOR
-				context.addMessage(null, new FacesMessage(
-						FacesMessage.SEVERITY_ERROR, "Atenção",
-						"TELA ADMINISTRADOR"));
-				url = null;
+				
+				url = "/pages/paginaPrincipalAdministrador.xhtml";
 			} else {
 				pessoa = pessoaService.buscarPessoaPorLogin(user, senha);
 				if (pessoa != null) {
@@ -74,9 +73,7 @@ public class LogginMbean extends BaseBean {
 					// caso contrário abre a tela de paciente (default)
 					else {
 						// TODO CHAMAR TELA PRINCIPAL DO PACIENTE
-						context.addMessage(null, new FacesMessage(
-								FacesMessage.SEVERITY_ERROR, "Atenção",
-								"TELA PACIENTE "));
+						
 						url = "/pages/paginaPrincipalPaciente.xhtml";
 					}
 
