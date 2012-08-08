@@ -3,10 +3,9 @@ package serviceImpl;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import entity.Pressao;
-
 import repository.PressaoRepository;
 import service.PressaoService;
+import entity.Pressao;
 
 @Stateless
 public class PressaoBean implements PressaoService{

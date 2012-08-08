@@ -3,10 +3,9 @@ package serviceImpl;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import entity.HistoricoFatoresRisco;
-
 import repository.HistoricoFatoresRiscoRepository;
 import service.HistoricoFatoresRiscoService;
+import entity.HistoricoFatoresRisco;
 
 @Stateless
 public class HistoricoFatoresRiscoBean implements HistoricoFatoresRiscoService {

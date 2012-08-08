@@ -5,8 +5,6 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
-import org.primefaces.component.paginator.PaginatorElementRenderer;
-
 import service.PessoaService;
 import entity.Medico;
 import entity.Pessoa;

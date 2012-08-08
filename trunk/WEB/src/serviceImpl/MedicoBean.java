@@ -5,9 +5,9 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import entity.Medico;
 import repository.MedicoRepository;
 import service.MedicoService;
+import entity.Medico;
 
 @Stateless
 public class MedicoBean implements MedicoService{
