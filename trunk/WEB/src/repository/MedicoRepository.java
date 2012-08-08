@@ -8,7 +8,7 @@ import javax.persistence.Query;
 import entity.Medico;
 
 @Stateless
-public class MedicoRepository extends repository {
+public class MedicoRepository extends repository<Medico> {
 	
 	@SuppressWarnings("unchecked")
 	public List<Medico> retornaAll(){

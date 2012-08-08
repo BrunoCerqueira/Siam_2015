@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import entity.Peso;
 
 @Stateless
-public class PesoRepository extends repository {
+public class PesoRepository extends repository<Peso> {
 
 	@SuppressWarnings("unchecked")
 	public List<Peso> retornaPesosById(Long idPaciente) {

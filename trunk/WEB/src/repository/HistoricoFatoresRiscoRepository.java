@@ -11,7 +11,7 @@ import entity.Peso;
 import entity.Pressao;
 
 @Stateless
-public class HistoricoFatoresRiscoRepository extends repository{
+public class HistoricoFatoresRiscoRepository extends repository<HistoricoFatoresRisco>{
 	
 	@SuppressWarnings("unchecked")
 	public HistoricoFatoresRisco retornaHistoricoByIdPessoa(Long idPessoa){

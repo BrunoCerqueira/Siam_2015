@@ -7,10 +7,11 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.Query;
 
+import entity.Medico;
 import entity.Paciente;
 
 @Stateless
-public class PacienteRepository extends repository{
+public class PacienteRepository extends repository<Medico>{
 	
 	
 	public void salva(Paciente paciente){
