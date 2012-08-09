@@ -16,95 +16,96 @@
 			value="#{historicoPacienteMbean.historicoFatoresRisco}">
 			<p:columnGroup type="header">
 				<p:row>
-					<p:column colspan="11" headerText="Dados atuais" />
+					<p:column colspan="11" headerText="#{msg.cln_dados_atuais}" />
 
 				</p:row>
 				<p:row>
-					<p:column rowspan="1" headerText="Peso" />
-					<p:column rowspan="1" headerText="Pressão" />
-					<p:column rowspan="1" headerText="Tabagista" />
-					<p:column rowspan="1" headerText="Alcool" />
-					<p:column rowspan="1" headerText="Exercícios" />
-					<p:column rowspan="1" headerText="Colesterol" />
-					<p:column rowspan="1" headerText="Diabetes" />
-					<p:column rowspan="1" headerText="Frutas" />
-					<p:column rowspan="1" headerText="Anticoncep.Oral" />
-					<p:column rowspan="1" headerText="Hipertenso" />
-					<p:column rowspan="1" headerText="ICM" />
+					<p:column rowspan="1" headerText="#{msg.cln_peso}" />
+					<p:column rowspan="1" headerText="#{msg.cln_pressao}" />
+					<p:column rowspan="1" headerText="#{msg.cln_tabagista}"  />
+					<p:column rowspan="1" headerText="#{msg.cln_alcool}" />
+					<p:column rowspan="1" headerText="#{msg.cln_exercicios}" />
+					<p:column rowspan="1" headerText="#{msg.cln_colesterol}" />
+					<p:column rowspan="1" headerText="#{msg.cln_diabetes}" />
+					<p:column rowspan="1" headerText="#{msg.cln_frutas}" />
+					<p:column rowspan="1" headerText="#{msg.cln_anticoncep_horal}" />
+					<p:column rowspan="1" headerText="#{msg.cln_hipertenso}" />
+					<p:column rowspan="1" headerText="#{msg.cln_imc}" />
 				</p:row>
 
 				<p:row>
-					<p:column rowspan="1" headerText="KG" />
-					<p:column rowspan="1" headerText="Sist/Diastólica" />
-					<p:column rowspan="1" headerText="Sim/Não" />
-					<p:column rowspan="1" headerText="Gramas/Dia" />
-					<p:column rowspan="1" headerText="Minutos/Dia" />
-					<p:column rowspan="1" headerText="MG/DL" />
-					<p:column rowspan="1" headerText="Sim/Não" />
-					<p:column rowspan="1" headerText="Gramas/Dia" />
-					<p:column rowspan="1" headerText="Sim/Não" />
-					<p:column rowspan="1" headerText="Sim/Não" />
-					<p:column rowspan="1" headerText="Massa/(Altura²)" />
+					<p:column rowspan="1" headerText="#{msg.cln_kg}" />
+					<p:column rowspan="1" headerText="#{msg.cln_sist_diastolica}" />
+					<p:column rowspan="1" headerText="#{msg.cln_sim_nao}" />
+					<p:column rowspan="1" headerText="#{msg.cln_gramas_dia}" />
+					<p:column rowspan="1" headerText="#{msg.cln_minutos_dia}" />
+					<p:column rowspan="1" headerText="#{msg.cln_mg_dl}" />
+					<p:column rowspan="1" headerText="#{msg.cln_sim_nao}" />
+					<p:column rowspan="1" headerText="#{msg.cln_gramas_dia}" />
+					<p:column rowspan="1" headerText="#{msg.cln_sim_nao}" />
+					<p:column rowspan="1" headerText="#{msg.cln_sim_nao}" />
+					<p:column rowspan="1" headerText="#{msg.cln_massa_altura}" />
 				</p:row>
+
 
 
 			</p:columnGroup>
-			<p:column headerText="Peso">
+			<p:column headerText="#{msg.cln_peso}">
 
 				<h:outputText value="#{historicoPacienteMbean.ultimoPeso.valor}" />
 
 			</p:column>
 
-			<p:column headerText="Pressao">
+			<p:column headerText="#{msg.cln_pressao}">
 				<h:outputText value="#{historicoPacienteMbean.pressaoAtual}" />
 
 
 
 			</p:column>
-			<p:column headerText="Tabagista">
+			<p:column headerText="#{msg.cln_tabagista}">
 				<h:outputText value="#{paciente.tabagista}" />
 			</p:column>
 
-			<p:column headerText="Alcool">
+			<p:column headerText="#{msg.cln_alcool}">
 
 				<h:outputText value="#{paciente.gramasAlcoolDia}" />
 			</p:column>
 
 
-			<p:column headerText="Atividade Fisica">
+			<p:column headerText="#{msg.cln_exercicios}">
 
 				<h:outputText value="#{paciente.minutosAtividadeFisicaDia}" />
 			</p:column>
 
 
-			<p:column headerText="Colesterol">
+			<p:column headerText="#{msg.cln_colesterol}">
 				<h:outputText value="#{paciente.colesterol}" />
 			</p:column>
 
 
-			<p:column headerText="Diabetes">
+			<p:column headerText="#{msg.cln_diabetes}">
 
 				<h:outputText value="#{paciente.diabetico}" />
 			</p:column>
 
 
-			<p:column headerText="Frutas">
+			<p:column headerText="#{msg.cln_frutas}">
 
 				<h:outputText value="#{paciente.gramasFrutasDia}" />
 			</p:column>
 
 
-			<p:column headerText="Anticoncep. Oral" style="width:48%">
+			<p:column headerText="#{msg.cln_anticoncep_horal}" style="width:48%">
 
 				<h:outputText value="#{paciente.usoAnticonceptionalOral}" />
 			</p:column>
 
-			<p:column headerText="Hipertenso" style="width:48%">
+			<p:column headerText="#{msg.cln_hipertenso}"  style="width:48%">
 
 				<h:outputText value="#{paciente.hipertenso}" />
 			</p:column>
 
-			<p:column headerText="IMC" style="width:48%">
+			<p:column headerText="#{msg.cln_imc}" style="width:48%">
 
 				<h:outputText value="#{paciente.imc}" />
 
@@ -121,13 +122,13 @@
 			rendered="#{historicoPacienteMbean.isMostraGrafico == false}"
 			update="formGraficoPaciente" value="historico"
 			icon="resources/imagens/medical_history_icon.jpg"
-			actionListener="#{historicoPacienteMbean.mostrarGrafico()}"
+			actionListener="#{historicoPacienteMbean.mostrarGrafico}"
 			styleClass="botaoCentral" />
 		<p:commandButton
 			rendered="#{historicoPacienteMbean.isMostraGrafico == true}"
 			update="formGraficoPaciente" value="Esconder Historico"
 			icon="resources/imagens/medical_history_icon.jpg"
-			actionListener="#{historicoPacienteMbean.mostrarGrafico()}"
+			actionListener="#{historicoPacienteMbean.mostrarGrafico}"
 			styleClass="botaoCentral" />
 
 

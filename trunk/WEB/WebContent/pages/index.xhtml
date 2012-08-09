@@ -11,6 +11,7 @@
 
 	<ui:define name="corpo">
 		<h:form id="idFormIndex">
+	
 			<p:spacer></p:spacer>
 			<h:panelGrid columns="1">
 
@@ -19,21 +20,21 @@
 			</h:panelGrid>
 			<div id="menu">
 				<h:panelGrid columns="1">
+			
 					<h:panelGroup>
-						<h:outputText value="Nome:" />
+						<h:outputText value="#{msg.label_nome}" />
 						<h:inputText value="#{logginMbean.user}" />
 					</h:panelGroup>
 
 					<h:panelGroup>
-						<h:outputText value="Senha:" />
+						<h:outputText value="#{msg.label_senha}" />
 						<h:inputSecret value="#{logginMbean.senha}" />
 						
-						<h:commandButton id="idButtonConnectar" value="teste"
-							action="#{logginMbean.conectar()}" />
+						<h:commandButton id="idButtonConnectar" value="#{msg.btn_entrar}"
+							action="#{logginMbean.conectar}" />
 						<p:growl id="growl" showDetail="true" sticky="true" />
 
-						<h:commandButton value="Entrar"
-							action="paginaPrincipalPaciente.xhtml" />
+						
 					</h:panelGroup>
 				</h:panelGrid>
 			</div>
