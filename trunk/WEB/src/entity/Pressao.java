@@ -35,7 +35,7 @@ public class Pressao {
 	private Integer valorDiastolica;
 	
 	
-	@Column(name="data")
+	@Column(name="data_pressao")
 	private Date data;
 	
 	@ManyToOne

@@ -13,7 +13,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@PrimaryKeyJoinColumn(name="idPessoa")
+@PrimaryKeyJoinColumn(name="id")
 @Table(name = "medico", schema = "siam")
 @NamedQueries({		
 	@NamedQuery(name="Medico.findAll", query="SELECT obj FROM Medico obj " ),
@@ -26,12 +26,11 @@ public class Medico extends Pessoa{
 	@Column(name="especialidade")
 	private String especialidade;
 	
-	@OneToMany
-	@JoinColumn(name="fk_paciente")
+	@OneToMany(mappedBy="medico")
 	private List<Paciente> paciente;
 	
 	@ManyToOne
-	@JoinColumn(name="fk_consultorio")
+	@JoinColumn(name="id_consultorio")
 	private Consultorio consultorio;
 
 	public Consultorio getConsultorio() {

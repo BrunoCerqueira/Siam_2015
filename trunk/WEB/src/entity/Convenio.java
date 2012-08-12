@@ -13,18 +13,19 @@ public class Convenio {
 	
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	@Column(name="idconvenio")
+	@Column(name="id")
 	private Long idConvenio;
 	
 	@Column(name="nome")
 	private String nome;
 	
-	@Column(name="percent_cobertura")
+	@Column(name="perc_cobertura")
 	private int percentualCobertura;
 	
 	public Long getIdConvenio() {
 		return idConvenio;
 	}
+	
 	public void setIdConvenio(Long idConvenio) {
 		this.idConvenio = idConvenio;
 	}

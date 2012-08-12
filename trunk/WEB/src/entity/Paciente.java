@@ -7,11 +7,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 
 
 @Entity
+@PrimaryKeyJoinColumn(name="id")
 @Table(name = "paciente", schema = "siam")
 @NamedQueries({		
 	@NamedQuery(name="Paciente.findByIdMedico", query="SELECT obj FROM Paciente obj WHERE obj.medico.id = :idMedico" )
@@ -30,15 +32,15 @@ public class Paciente extends Pessoa {
 	private Integer altura;
 
 	@ManyToOne
-	@JoinColumn(name="idconvenio")
+	@JoinColumn(name="id_convenio")
 	private Convenio convenio;
 	
 	@ManyToOne
-	@JoinColumn(name="fk_medico")
+	@JoinColumn(name="id_medico")
 	private Medico medico;
 	
 	@OneToOne
-	@JoinColumn(name="fk_fator_risc")
+	@JoinColumn(name="id_historico_riscos")
 	private HistoricoFatoresRisco historicoFatoresRisco;
 
 	

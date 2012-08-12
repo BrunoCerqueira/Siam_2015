@@ -17,14 +17,13 @@ public class Consultorio {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idconsultorio")
+	@Column(name = "id")
 	private Long id;
 	
 	@Column(name="nome")
 	private String nome;
 	
-	@OneToMany
-    @JoinColumn(name="idpessoa")
+	@OneToMany(mappedBy="consultorio")
 	private List<Medico> medicos;
 	
 	@Column(name="endereco")

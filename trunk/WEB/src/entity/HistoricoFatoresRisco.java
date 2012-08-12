@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "fator_risc", schema = "siam")
+@Table(name = "historico_riscos", schema = "siam")
 @NamedQueries({
 		@NamedQuery(name = "HistoricoFatoresRisco.findHistoricoByIdPessoa", 
 				query = "SELECT obj FROM HistoricoFatoresRisco obj WHERE obj.paciente.id = :idPessoa")
@@ -34,19 +35,19 @@ public class HistoricoFatoresRisco {
 	@Column(name="tabagista")
 	private Boolean tabagista;
 	
-	@Column(name="gramas_alcool_dia")
+	@Column(name="gramas_alcool")
 	private Integer gramasAlcoolDia;
 	
-	@Column(name="gramas_frutas_dia")
+	@Column(name="gramas_frutas")
 	private Integer gramasFrutasDia;
 	
-	@Column(name="minutos_ati_fis_dia")
+	@Column(name="min_ativ_fisica")
 	private Integer minutosAtividadeFisicaDia;
 	
 	@Column(name="colesterol")
 	private Integer colesterol;
 	
-	@Column(name="uso_anticoncepcional")
+	@Column(name="ant_concep_oral")
 	private Boolean usoAnticonceptionalOral;
 	
 	@Column(name="hipertenso")
@@ -64,8 +65,36 @@ public class HistoricoFatoresRisco {
 	@Column(name="imc")
 	private Integer imc;
 	
+	@Column(name="dt_coleta")
+	private Date dataVerificacao;
 	
 	
+	
+	
+	
+	
+	
+	public Date getDataVerificacao() {
+		return dataVerificacao;
+	}
+	public void setDataVerificacao(Date dataVerificacao) {
+		this.dataVerificacao = dataVerificacao;
+	}
+	public void setGramasAlcoolDia(Integer gramasAlcoolDia) {
+		this.gramasAlcoolDia = gramasAlcoolDia;
+	}
+	public void setGramasFrutasDia(Integer gramasFrutasDia) {
+		this.gramasFrutasDia = gramasFrutasDia;
+	}
+	public void setMinutosAtividadeFisicaDia(Integer minutosAtividadeFisicaDia) {
+		this.minutosAtividadeFisicaDia = minutosAtividadeFisicaDia;
+	}
+	public void setColesterol(Integer colesterol) {
+		this.colesterol = colesterol;
+	}
+	public void setImc(Integer imc) {
+		this.imc = imc;
+	}
 	public List<Pressao> getPressao() {
 		return pressao;
 	}

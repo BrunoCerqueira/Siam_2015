@@ -36,11 +36,11 @@ public class Peso {
 	@Column(name="valor")
 	private int valor;
 	
-	@Column(name="data")
+	@Column(name="data_peso")
 	private Date data;
 	
 	@ManyToOne
-	@JoinColumn(name = "fk_hist_fator_risc")
+	@JoinColumn(name = "id_historico_riscos")
 	private HistoricoFatoresRisco historicoFatoresRisco;
 	
 	public int getValor() {
@@ -49,6 +49,7 @@ public class Peso {
 	public void setValor(int valor) {
 		this.valor = valor;
 	}
+	
 	public Date getData() {
 		return data;
 	}
