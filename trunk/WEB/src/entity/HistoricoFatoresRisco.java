@@ -50,10 +50,10 @@ public class HistoricoFatoresRisco {
 	@Column(name="ant_concep_oral")
 	private Boolean usoAnticonceptionalOral;
 	
-	@Column(name="hipertenso")
+	@Column(name="hipertensao")
 	private Boolean hipertenso;
 
-	@Column(name="diabetico")
+	@Column(name="diabetes")
 	private Boolean diabetico;
 	
 	@OneToMany(mappedBy="historicoFatoresRisco" )
@@ -106,7 +106,7 @@ public class HistoricoFatoresRisco {
 			return "Sim";
 		}
 		else
-			return "Não";
+			return "Nï¿½o";
 		
 	}
 	public void setHipertenso(Boolean hipertenso) {
@@ -117,7 +117,7 @@ public class HistoricoFatoresRisco {
 			return "Sim";
 		}
 		else
-			return "Não";
+			return "Nï¿½o";
 		
 	}
 	public void setDiabetico(Boolean diabetico) {
@@ -141,7 +141,7 @@ public class HistoricoFatoresRisco {
 			return "Sim";
 		}
 		else
-			return "Não";
+			return "Nï¿½o";
 		
 	}
 	
@@ -179,7 +179,7 @@ public class HistoricoFatoresRisco {
 			return "Sim";
 		}
 		else
-			return "Não";
+			return "Nï¿½o";
 		
 	}
 	public void setUsoAnticonceptionalOral(Boolean usoAnticonceptionalOral) {
