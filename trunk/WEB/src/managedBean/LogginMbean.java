@@ -27,19 +27,19 @@ public class LogginMbean extends BaseBean {
 	public String conectar() {
 		context = FacesContext.getCurrentInstance();
 		String url = null;
-		// se usuário não preencheou todos os campos
+		// se usuï¿½rio nï¿½o preencheou todos os campos
 
 		if ((this.senha == null || this.senha == "")
 				|| (this.user == null || this.senha == "")) {
 			context.addMessage(null, new FacesMessage(
-					FacesMessage.SEVERITY_ERROR, "Atenção",
+					FacesMessage.SEVERITY_ERROR, "AtencÃ£o",
 					"Favor preencher todos campos de loggin! "));
 
 		}
 
 		else {
 
-			// se usuario é o administrador do sistema
+			// se usuario ï¿½ o administrador do sistema
 
 			if (this.user.equals(ADMINISTRADOR_USER)
 					&& this.senha.equals(ADMINISTRADOR_SENHA)) {
@@ -51,24 +51,24 @@ public class LogginMbean extends BaseBean {
 					setId(pessoa.getId());
 				}
 
-				// se retorno da busca no banco é null -> usuário inexistente
+				// se retorno da busca no banco ï¿½ null -> usuï¿½rio inexistente
 				if (pessoa == null) {
 					context.addMessage(null, new FacesMessage(
-							FacesMessage.SEVERITY_ERROR, "Atenção",
-							"Usuario não encontrado! "));
+							FacesMessage.SEVERITY_ERROR, "AtenÃ§Ã£o",
+							"Usuario nÃ£o encontrado! "));
 				} else {
 
-					// verifica se pessoa retornada do banco é instancia de um
-					// médico e redireciona para página inicial de médico
+					// verifica se pessoa retornada do banco ï¿½ instancia de um
+					// mï¿½dico e redireciona para pï¿½gina inicial de mï¿½dico
 
 					if (pessoa instanceof Medico) {
-						// TODO CHAMAR TELA PRINCIPAL DO MÉDICO
+						// TODO CHAMAR TELA PRINCIPAL DO Mï¿½DICO
 						context.addMessage(null, new FacesMessage(
-								FacesMessage.SEVERITY_ERROR, "Atenção",
+								FacesMessage.SEVERITY_ERROR, "AtenÃ§Ã£o",
 								"TELA MEDICO "));
 
 					}
-					// caso contrário abre a tela de paciente (default)
+					// caso contrï¿½rio abre a tela de paciente (default)
 					else {
 						// TODO CHAMAR TELA PRINCIPAL DO PACIENTE
 						

@@ -28,15 +28,15 @@ public class Consulta {
 	private Date dataConsulta;
 
 	@OneToOne
-	@JoinColumn(name = "id_paciente")
+	@JoinColumn(name = "fk_paciente")
 	private Paciente paciente;
 
 	@ManyToOne
-	@JoinColumn(name = "id_medico")
+	@JoinColumn(name = "fk_medico")
 	private Medico medico;
 
 	@OneToOne
-	@JoinColumn(name = "id_resumo")
+	@JoinColumn(name = "fk_resumo")
 	private Resumo resumo;
 
 	public Resumo getResumo() {

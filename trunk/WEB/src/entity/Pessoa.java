@@ -12,13 +12,14 @@ import javax.persistence.InheritanceType;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @Table(name = "pessoa", schema = "siam")
 @NamedQueries({		
 	@NamedQuery(name="Pessoa.findPessoaPorSenha", query="SELECT obj FROM Pessoa obj WHERE obj.senha = :senha" ),
-	@NamedQuery(name="Pessoa.findPessoaPorLogin", query="SELECT obj FROM Pessoa obj WHERE obj.nome = :nome and obj.senha = :senha" )
+	@NamedQuery(name="Pessoa.findPessoaPorLogin", query=" SELECT obj FROM Pessoa obj WHERE obj.nome = :nome AND obj.senha = :senha " )
 	
 })
 public  class Pessoa {
@@ -26,7 +27,7 @@ public  class Pessoa {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "idpessoa")
 	private Long id;
 
 	@Column(name = "nome")

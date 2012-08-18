@@ -17,7 +17,7 @@ public class Consultorio {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "idconsultorio")
 	private Long id;
 	
 	@Column(name="nome")

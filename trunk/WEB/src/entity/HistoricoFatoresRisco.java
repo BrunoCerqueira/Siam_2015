@@ -16,7 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "historico_riscos", schema = "siam")
+@Table(name = "hist_fator_risco", schema = "siam")
 @NamedQueries({
 		@NamedQuery(name = "HistoricoFatoresRisco.findHistoricoByIdPessoa", 
 				query = "SELECT obj FROM HistoricoFatoresRisco obj WHERE obj.paciente.id = :idPessoa")
@@ -25,23 +25,23 @@ public class HistoricoFatoresRisco {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="idhist_fator_risc")
+	@Column(name="idhist_fator_risco")
 	private Long id;
 	
 	@OneToOne
-	@JoinColumn(name="id_paciente")
+	@JoinColumn(name="fk_paciente")
 	private Paciente paciente;
 	
 	@Column(name="tabagista")
 	private Boolean tabagista;
 	
-	@Column(name="gramas_alcool")
+	@Column(name="gramas_alcool_dia")
 	private Integer gramasAlcoolDia;
 	
-	@Column(name="gramas_frutas")
+	@Column(name="gramas_fruta_dia")
 	private Integer gramasFrutasDia;
 	
-	@Column(name="min_ativ_fisica")
+	@Column(name="minutos_ativ_fisica")
 	private Integer minutosAtividadeFisicaDia;
 	
 	@Column(name="colesterol")

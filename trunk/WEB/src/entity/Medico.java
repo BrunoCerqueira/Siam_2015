@@ -13,7 +13,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@PrimaryKeyJoinColumn(name="id")
+@PrimaryKeyJoinColumn(name="idpessoa")
 @Table(name = "medico", schema = "siam")
 @NamedQueries({		
 	@NamedQuery(name="Medico.findAll", query="SELECT obj FROM Medico obj " ),
@@ -30,7 +30,7 @@ public class Medico extends Pessoa{
 	private List<Paciente> paciente;
 	
 	@ManyToOne
-	@JoinColumn(name="id_consultorio")
+	@JoinColumn(name="fk_consultorio")
 	private Consultorio consultorio;
 
 	public Consultorio getConsultorio() {
