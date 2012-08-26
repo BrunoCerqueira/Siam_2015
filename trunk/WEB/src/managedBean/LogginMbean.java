@@ -4,28 +4,39 @@ import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import service.PessoaService;
 import entity.Medico;
 import entity.Pessoa;
 
 @ManagedBean
-public class LogginMbean extends BaseBean {
+public class LogginMbean  extends BaseBean {
 
 	private static final String ADMINISTRADOR_USER = "administrador";
 	private static final String ADMINISTRADOR_SENHA = "123";
 
-	@EJB
+	InitialContext contexto;
+	FacesContext context = FacesContext.getCurrentInstance();
 	PessoaService pessoaService;
+	Pessoa pessoa;
 
-	private FacesContext context;
+	private InitialContext initialContext;
 
 	private String user;
 	private String senha;
-	private Pessoa pessoa;
+	
 
-	public String conectar() {
-		context = FacesContext.getCurrentInstance();
+	public String conectar()throws NamingException {
+		/*
+		 * utilizando LOOKUP COMO EXEMPLO NESTE CASO ,AO INVÉS DA NOTAÇÂO EJB PARA INJEÇÂO DE DEPENDENCIA
+		 * OBS: O endereco de LOOKUP PARA O SERVIÇO DO EJB SEGUE O PADRAO: CONTEXTO/CAMINHO BEAN ! CAMINHO INTERFACE REMOTA
+		*/
+		initialContext = new InitialContext();
+		pessoaService = (PessoaService) initialContext.lookup("java:global/siamEAR/sistemaEspecialista/PessoaBean!service.PessoaService");
+		
 		String url = null;
 		// se usu�rio n�o preencheou todos os campos
 

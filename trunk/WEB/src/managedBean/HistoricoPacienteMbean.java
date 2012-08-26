@@ -44,11 +44,11 @@ public class HistoricoPacienteMbean extends BaseBean {
 	public void init() {
 		isMostraGrafico = false;
 		historicoFatoresRisco = historicoFatoresRiscoService
-				.retornaHistorico(3L/* getId() */);
+				.retornaHistorico(1L/* getId() */);
 		
-		ultimaPressao = pressaoService.retornaUltimaMedicao(3L/* getId() */);
+		ultimaPressao = pressaoService.retornaUltimaMedicao(1L/* getId() */);
 		pressaoAtual = ultimaPressao.getValorSistolica().toString()+"/"+ultimaPressao.getValorDiastolica().toString();
-		ultimoPeso = pesoService.retornaUltimaMedicao(3L/* getId() */);
+		ultimoPeso = pesoService.retornaUltimaMedicao(1L/* getId() */);
 		
 		graficoLinearPesos = new CartesianChartModel();
 		graficoBarrasPesos = new CartesianChartModel();
@@ -93,8 +93,8 @@ public class HistoricoPacienteMbean extends BaseBean {
 		ChartSeries pressaoSistolicaBarra = new ChartSeries();
 		
 		ChartSeries pressaoDiastolicaBarra = new ChartSeries();
-		pressaoDiastolicaLinear.setLabel("Pressão Diastólica");
-		pressaoSistolicaLinear.setLabel("Pressão Sistólica");
+		pressaoDiastolicaLinear.setLabel("Pressï¿½o Diastï¿½lica");
+		pressaoSistolicaLinear.setLabel("Pressï¿½o Sistï¿½lica");
 		for (Pressao pre : historicoFatoresRisco.getPressao()) {
 			String data = pre.getData().toString().substring(0, 10);
 			String ano = data.substring(0,4);
