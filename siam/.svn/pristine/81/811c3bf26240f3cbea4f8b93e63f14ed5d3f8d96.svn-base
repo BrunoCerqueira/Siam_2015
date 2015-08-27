@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+	</h:head>
+	<h:body>
+		<h:outputStylesheet library="css" name="estilo.css" />
+		
+			<div id="divCabecalho">
+				<ui:insert name="cabecalhoLoggin">
+
+					<ui:include src="/template/cabecalhoLoggin.xhtml" />
+
+				</ui:insert>
+			</div>
+		<div id="wrap">	
+			<div id="divCorpo">
+				<ui:insert name="corpo">
+
+				</ui:insert>
+			</div>
+			<div id="main"></div>
+		</div>
+
+		<div id="footer">
+			<ui:insert name="rodape">
+
+				<ui:include src="/template/rodape.xhtml" />
+
+			</ui:insert>
+		</div>
+	</h:body>
+
+
+</ui:fragment>

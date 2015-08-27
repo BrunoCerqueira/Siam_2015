@@ -1,0 +1,65 @@
+#labels
+
+label_nome = Nome
+label_senha = Senha
+
+#Menu Item
+
+label_menu_item_cadastro_medico = Cadástro de médico
+label_menu_item_cadastro_paciente = Cadástro de paciente
+label_menu_item_editar_historico_paciente = Editar Histórico Paciente
+label_menu_item_editar_valores_consulta = Editar Valores Consultas
+label_menu_item_home = Home
+label_menu_item_contatos = Contatos
+label_menu_item_marcar_consulta = Marcar Consulta
+label_menu_item_historicos = Históricos
+
+
+
+
+
+
+
+
+
+
+
+
+#botoes
+
+btn_entrar = Entrar
+
+#colunas
+
+cln_peso = Peso
+cln_pressao = Pressao
+cln_tabagista = Tabagista
+cln_alcool = Alcool
+cln_atividade_fisica = Atividade Fisica
+cln_colesterol = Colesterol
+cln_diabetes = Diabetes
+cln_frutas = Frutas
+cln_anticoncep_horal = Anticoncep. Oral
+cln_hipertenso = Hipertenso
+cln_imc = IMC
+cln_exercicios = Exercícios
+cln_dados_atuais = Dados atuais
+cln_kg = KG
+cln_sist_diastolica = Sist/Diastólica
+cln_sim_nao = Sim/Não
+cln_gramas_dia = Gramas/Dia
+cln_minutos_dia = Minutos/Dia
+cln_mg_dl = MG/DL
+cln_massa_altura = Massa/Altura²
+					
+
+
+
+
+
+
+
+
+
+
+

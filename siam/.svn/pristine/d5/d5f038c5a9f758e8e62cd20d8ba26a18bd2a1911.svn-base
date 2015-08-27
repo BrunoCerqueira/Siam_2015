@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="estilo.css" />
+</h:head>
+<body>
+	<h:form>
+		<h:graphicImage value="/resources/imagens/pacienteSuite.jpg"
+			style="margin-left:360px; margin-top: 5px; width: 600px; "/>
+		<p:slideMenu 
+			style="width: 400px; height: 150px; margin-top:10px; left: 35% !important;">
+			<p:submenu label="  Históricos"  icon="ui-icon-folder-collapsed"
+				style=" left: 30%;  height: 180px; !important;" styleClass="fonteMedia" >
+				<p:menuitem value="  Dados médicos" icon="ui-icon-folder-collapsed" url="graficoPaciente.xhtml" styleClass="fonteMedia" />
+
+				<p:menuitem value="  Receitas" icon="ui-icon-folder-collapsed"  />
+			</p:submenu>
+		
+		
+
+			
+		</p:slideMenu>
+
+
+
+	</h:form>
+</body>
+</html>
