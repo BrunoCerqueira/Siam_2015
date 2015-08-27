@@ -1,0 +1,71 @@
+package example.topic;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class SwingBasic extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2603040007677913811L;
+	JPanel row = new JPanel();
+	String[] columnNames = {"Descrição",
+            "Valor",
+            "Lotes",
+            "Tipo de operação"};
+
+	JTable table = new JTable(new DefaultTableModel(columnNames,0));
+	
+	GridLayout experimentLayout = new GridLayout(0,1);
+	public void start(Operacao operacao) {
+		
+		JLabel l = new JLabel();
+		l.setText("Descrição: "+operacao.getDescricao()+"|"+"valor: "+operacao.getValorLote()+"|"+"lotes: "+operacao.getQuantidadeLotes()+"| Tipo Operação: "+operacao.getTipoOperacao().getDescricao());
+		row.add(l);
+		row.setFocusable(Boolean.FALSE);
+		row.setVerifyInputWhenFocusTarget(Boolean.FALSE);
+		
+		row.setLayout(experimentLayout);
+		
+		add(row);
+	
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		model.addColumn("Descrição");
+		model.addColumn("Valor");
+		model.addColumn("Lote");
+		model.addColumn("Tipo de operação");
+		model.addRow(new Object[] {operacao.getDescricao(), operacao.getValorLote(), operacao.getQuantidadeLotes(),operacao.getTipoOperacao().getDescricao() });
+			setSize(800, 800);
+			
+
+		
+		add(table);	
+		setVisible(true);
+		
+	}
+	@Override
+	public void setVisible(final boolean visible) {
+	  // make sure that frame is marked as not disposed if it is asked to be visible
+	  if (visible) {
+	     
+	  }
+	  // let's handle visibility...
+	  if (!visible || !isVisible()) { // have to check this condition simply because super.setVisible(true) invokes toFront if frame was already visible
+	      super.setVisible(visible);
+	  }
+	  // ...and bring frame to the front.. in a strange and weird way
+	  if (visible) {
+	      int state = super.getExtendedState();
+	      state &= ~JFrame.ICONIFIED;
+	      super.setExtendedState(state);
+	      super.setAlwaysOnTop(false);
+	
+	  }
+	}
+
+	
+}

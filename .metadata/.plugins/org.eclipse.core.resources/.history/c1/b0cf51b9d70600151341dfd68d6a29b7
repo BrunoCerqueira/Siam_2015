@@ -1,0 +1,50 @@
+package example.topic;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JTable;
+
+public class SwingBasic extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2603040007677913811L;
+	JPanel row = new JPanel();
+	GridLayout experimentLayout = new GridLayout(0,1);
+	public void start(Operacao operacao) {
+		String[] columnNames = {"First Name",
+                "Last Name",
+                "Sport",
+                "# of Years",
+                "Vegetarian"};
+		Object[][] data = {
+			    {"Kathy", "Smith",
+			     "Snowboarding", new Integer(5), new Boolean(false)},
+			    {"John", "Doe",
+			     "Rowing", new Integer(3), new Boolean(true)},
+			    {"Sue", "Black",
+			     "Knitting", new Integer(2), new Boolean(false)},
+			    {"Jane", "White",
+			     "Speed reading", new Integer(20), new Boolean(true)},
+			    {"Joe", "Brown",
+			     "Pool", new Integer(10), new Boolean(false)}
+			};
+		JTable table = new JTable(data, columnNames);
+		JLabel l = new JLabel();
+		l.setText("");
+		row.add(l);
+		row.setLayout(experimentLayout);
+		 JScrollBar vbar = new JScrollBar(JScrollBar.VERTICAL);
+		 add(vbar);
+		add(row);
+		add(table);
+			setSize(400, 400);
+		setVisible(true);
+		
+	}
+
+	
+}

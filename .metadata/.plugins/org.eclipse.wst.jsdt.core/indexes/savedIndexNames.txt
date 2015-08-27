@@ -1,0 +1,15 @@
+INDEX VERSION 1.3+/home/bruno/teste/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1138666197.index
+4094750694.index
+334935177.index
+3987554954.index
+1532310358.index
+1834873776.index
+1580099294.index
+1834873776.index
+1623584672.index
+4107990806.index
+1580099294.index
+2863926403.index
+3929520955.index
+690492488.index

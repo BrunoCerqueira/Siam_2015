@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p:fieldset legend="Home Broker">
+			<h:panelGrid>
+				<p:outputLabel value="Empresa: ">
+					<h:selectOneMenu value="#{geracaoOfertasMB.operacao.descricao}">
+						<f:selectItem itemValue="Google" itemLabel="Google" />
+						<f:selectItem itemValue="Microsoft" itemLabel="Microsoft" />
+						<f:selectItem itemValue="Apple" itemLabel="Apple" />
+					</h:selectOneMenu>
+				</p:outputLabel>
+
+				<p:outputLabel value="Quantidade de lotes: ">
+					<p:inputText id="idQuantidade"
+						value="#{geracaoOfertasMB.operacao.quantidadeLotes}" />
+					<p:slider for="idQuantidade" />
+				</p:outputLabel>
+
+				<p:outputLabel value="Tipo de operação: ">
+					<h:selectOneMenu value="#{geracaoOfertasMB.operacao.tipoOperacao}">
+						<f:selectItems value="#{geracaoOfertasMB.tiposOperacao()}"
+							var="to" itemValue="#{to}" itemLabel="#{to.descricao}" />
+					</h:selectOneMenu>
+				</p:outputLabel>
+				<h:commandButton value="adicionar proposta"
+					action="#{geracaoOfertasMB.gerarOfertas()}"></h:commandButton>
+			</h:panelGrid>
+
+		</p:fieldset>
+
+		<p:outputPanel id="dtListaOperacoes">
+			<p:dataTable value="#{geracaoOfertasMB.listaOperacoes}"
+				var="operacao">
+				<p:column headerText="Descrição">
+
+					<h:outputText value="Descrição: " />
+
+					<h:outputText value="#{operacao.descricao}" />
+				</p:column>
+
+				<p:column headerText="Quantidade de lotes">
+
+
+
+					<h:outputText value="#{operacao.quantidadeLotes}" />
+				</p:column>
+
+
+				<p:column headerText="Tipo de operação">
+
+
+
+					<h:outputText value="#{operacao.tipoOperacao.descricao}" />
+				</p:column>
+
+				<p:column headerText="Tipo de operação">
+
+
+
+					<h:outputText value="#{operacao.tipoOperacao.descricao}" />
+				</p:column>
+				
+				<p:column headerText="Valor da ação">
+
+
+
+					<h:outputText value="#{operacao.valorLote}" > <f:convertNumber pattern="#0.00" /> </h:outputText>
+
+
+				</p:column>
+
+
+			</p:dataTable>
+			
+			
+			
+			<p:dataTable value="#{geracaoOfertasMB.listaOperacoes}" var="op">
+			
+			<p:column headerText="descricao" >
+				<h:outputLabel value="#{op.descricao}" />
+			
+			</p:column>
+			
+			</p:dataTable>
+		</p:outputPanel>
+		<p:commandButton value="Atualizar"
+			action="#{geracaoOfertasMB.atualizarListaOperacoes()}"
+			update="dtListaOperacoes" />
+	</h:form>
+</body>
+</html>

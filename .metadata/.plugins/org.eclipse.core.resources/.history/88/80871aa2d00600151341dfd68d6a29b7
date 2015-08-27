@@ -1,0 +1,17 @@
+package example.topic;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class SwingBasic extends JFrame {
+	public void start() {
+		JLabel l = new JLabel();
+		l.setText("Anurag jain(csanuragjain)");
+		add(l);
+		setSize(400, 400);
+		setVisible(true);
+	}
+
+	public static void main(String args[]) {
+		new SwingBasic().start();
+	}
+}

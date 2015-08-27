@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form id="formPaciente">
+		<p:dock position="top" itemWidth="50" >
+
+
+			<p:menuitem value="#{msg.label_menu_item_cadastro_medico}"
+				icon="/resources/imagens/Doctor Group Add.jpg" url="#" />
+			<p:menuitem value="#{msg.label_menu_item_cadastro_paciente}"
+				icon="/resources/imagens/Patient Group Add.jpg" url="#" />
+			<p:menuitem value="#{msg.label_menu_item_editar_historico_paciente}"
+				icon="/resources/imagens/Medical History Move Down.jpg"
+				actionListener="#{historicoPacienteMbean.regrasTelaPaciente.exibirPesquisaPaciente}"
+				update=":formPaciente" />
+			<p:menuitem value="#{msg.label_menu_item_editar_valores_consulta}"
+				icon="/resources/imagens/Medical value.jpg" url="#" />
+
+		</p:dock>
+		<p:outputPanel id="idConsultarPaciente">
+			<p:outputPanel
+				rendered="#{historicoPacienteMbean.regrasTelaPaciente.isExibirPesquisaPaciente}">
+				<p:spacer height="5%" />
+				<fieldset>
+					<h:panelGrid>
+						<h:outputLabel value="Pesquisar paciente:" />
+
+
+						<h:outputText value="Nome: " />
+						<h:column>
+							<p:inputText
+								value="#{historicoPacienteMbean.pacientePesquisa.nome}" />
+
+							<p:commandButton value="pesquisar"
+								action="#{historicoPacienteMbean.pesquisar()}"
+								update="idDtPacientes"
+								/>
+						</h:column>
+					</h:panelGrid>
+				</fieldset>
+
+
+				<p:spacer height="20px"></p:spacer>
+				<p:outputPanel id="idDtPacientes"
+					style="display: block;background: darkgray; padding: 30px;">
+
+					<p:dataTable rendered="#{historicoPacienteMbean.pacientes ne null}"
+						value="#{historicoPacienteMbean.pacientes}" var="paciente"
+						emptyMessage="Nenhum paciente para ser mostrado">
+						<p:column headerText="Nome">
+							<h:outputLabel value="#{paciente.nome}" />
+
+						</p:column>
+						<p:column headerText="Nome">
+
+							<p:commandButton image="/resources/imagens/Edit-Male-User.png" update=":formPaciente"
+								actionListener="#{historicoPacienteMbean.editar(paciente)}" />
+
+
+						</p:column>
+
+					</p:dataTable>
+				</p:outputPanel>
+			</p:outputPanel>
+		</p:outputPanel>
+		<p:outputPanel id="idSuitePaciente"
+			rendered="#{historicoPacienteMbean.regrasTelaPaciente.isExibirSuitePaciente}">
+			<h:graphicImage value="/resources/imagens/pacienteSuite.jpg"
+				style="margin-left:360px; margin-top: 25px; width: 600px; " />
+			<p:slideMenu
+				style="width: 400px; height: 150px; margin-top:10px; left: 35% !important;">
+				<p:submenu label="  Históricos" icon="ui-icon-folder-collapsed"
+					style=" left: 30%;  height: 180px; !important;"
+					styleClass="fonteMedia">
+					<p:menuitem value="  Dados médicos" icon="ui-icon-folder-collapsed"
+						actionListener="#{historicoPacienteMbean.construirGraficosPaciente}" update=":formPaciente"
+						styleClass="fonteMedia" />
+
+					<p:menuitem value="  Receitas" icon="ui-icon-folder-collapsed" />
+				</p:submenu>
+
+
+
+
+			</p:slideMenu>
+		</p:outputPanel>
+
+		<p:outputPanel id="idGraficoPaciente"
+			rendered="#{historicoPacienteMbean.regrasTelaPaciente.isExibirDadosPaciente}">
+			<ui:include src="/includes/graficoPaciente.xhtml" />
+		</p:outputPanel>
+
+	</h:form>
+</body>
+</html>

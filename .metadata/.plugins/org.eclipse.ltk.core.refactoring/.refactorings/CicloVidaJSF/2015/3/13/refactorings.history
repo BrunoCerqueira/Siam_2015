@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 7 elements from project &apos;CicloVidaJSF&apos;&#x0A;- Original project: &apos;CicloVidaJSF&apos;&#x0A;- Original elements:&#x0A;     el-api-2.2.jar&#x0A;     el-impl-2.2.jar&#x0A;     jsf-api-2.1.11.jar&#x0A;     jsf-impl-2.1.11.jar&#x0A;     jstl-1.2.jar&#x0A;     log4j-1.2.16.jar&#x0A;     primefaces-3.4.jar" description="Delete elements" element1="WebContent/WEB-INF/lib/jsf-impl-2.1.11.jar" element2="WebContent/WEB-INF/lib/el-impl-2.2.jar" element3="WebContent/WEB-INF/lib/jsf-api-2.1.11.jar" element4="WebContent/WEB-INF/lib/el-api-2.2.jar" element5="WebContent/WEB-INF/lib/log4j-1.2.16.jar" element6="WebContent/WEB-INF/lib/jstl-1.2.jar" element7="WebContent/WEB-INF/lib/primefaces-3.4.jar" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="7" stamp="1427511916543" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p:dock position="top" itemWidth="100">
+
+			<p:menuitem value="#{msg.label_menu_item_home}" title="oi"
+				icon="/resources/imagens/1 - Home.png" url="#" />
+			<p:menuitem value="#{msg.label_menu_item_contatos}"
+				icon="/resources/imagens/receptionist-icon.png" url="#" />
+			<p:menuitem value="#{msg.label_menu_item_marcar_consulta}"
+				icon="/resources/imagens/stethoscope-icon.png" url="#" />
+			<p:menuitem value="#{msg.label_menu_item_historicos}"
+				icon="/resources/imagens/order-history.png"
+				actionListener="#{historicoPacienteMbean.regrasTelaPaciente.exibirPesquisaPaciente}"/>
+
+		</p:dock>
+	</h:form>
+</body>
+</html>

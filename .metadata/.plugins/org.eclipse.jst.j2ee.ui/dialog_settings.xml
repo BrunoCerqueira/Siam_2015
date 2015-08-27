@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="true" key="J2EE_EXPORT_SOURCE"/>
+	<list key="J2EE_IMPORT_null">
+		<item value="/home/bruno/teste/webapps/CicloVidaJSF.war"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_EAR">
+		<item value="/home/bruno/Área de Trabalho/siamEAR.ear"/>
+		<item value="/home/bruno/siam/deployments/siamEAR.ear"/>
+		<item value="/home/bruno/siamEAR.ear"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/home/bruno/Área de Trabalho/mobile.war"/>
+		<item value="/home/bruno/teste/webapps/CicloVidaJSF.war"/>
+		<item value="/home/bruno/Área de Trabalho/prime-ejb-crud.war"/>
+		<item value="/home/bruno/siam/deployments/siam.war"/>
+	</list>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="JBoss 7.1 Runtime"/>
+	</list>
+</section>

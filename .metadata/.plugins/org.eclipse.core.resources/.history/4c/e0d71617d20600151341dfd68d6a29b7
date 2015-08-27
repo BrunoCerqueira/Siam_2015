@@ -1,0 +1,25 @@
+package example.topic;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class SwingBasic extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2603040007677913811L;
+	JPanel row = new JPanel();
+	public void start(String operacao) {
+		
+		JLabel l = new JLabel();
+		l.setText("Anurag jain(csanuragjain)");
+		row.add(l);
+		add(row);
+		setSize(400, 400);
+		setVisible(true);
+	}
+
+	public static void main(String args[]) {
+		new SwingBasic().start();
+	}
+}

@@ -1,0 +1,10 @@
+1427644806534	Rename resource 'historicoPaciente.xhtml'
+1427645315805	Rename resource 'paginaPrincipalPaciente.xhtml'
+1427645685311	Move 'graficoPaciente.xhtml' to 'includes'
+1427645706053	Delete element
+1427647281054	Delete element
+1427647339924	Move 'paginaPrincipalPaciente.xhtml' to 'pages'
+1427647387169	Delete element
+1427651751376	Delete element
+1427653138588	Rename field 'isExibirGraficoPaciente'
+1427653338694	Rename method 'exibirGraficoPaciente'

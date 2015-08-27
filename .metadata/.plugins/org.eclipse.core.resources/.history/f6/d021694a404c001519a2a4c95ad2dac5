@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+
+
+<ui:composition template="/template/templatePadrao.xhtml"> 
+<div id="divCabecalho">
+				<ui:insert name="cabecalhoLoggin">
+ 
+					<h:graphicImage value="/resources/imagens/logoSiam.jpg" style="margin-left:20%"/>
+
+				</ui:insert>
+			</div>
+
+	<ui:define name="corpo">
+		<h:form id="idFormIndex">
+<h:head>
+	
+
+</h:head>
+			<p:spacer></p:spacer>
+			<h:panelGrid columns="1">
+
+
+
+			</h:panelGrid>
+			<div id="menu">
+				<p:fieldset style="margin-left: 65%;margin-top: 23%;padding-right: 14%;">
+					<h:panelGrid columns="1">
+ 
+						Z
+					</h:panelGrid>
+				</p:fieldset>
+			</div>
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>
+
+</html>

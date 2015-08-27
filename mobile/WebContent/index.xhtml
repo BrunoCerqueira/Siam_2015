@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+
+<h:head>
+</h:head>
+
+
+<h:body>
+	<f:view renderKitId="PRIMEFACES_MOBILE">
+		<h:form id="idFormLoggin" rendered="#{not controleMB.isUsuarioLogado}">
+			<p:growl id="growl" showDeail="true" autoUpdate="true" />
+
+
+			<pm:field>
+				<p:outputLabel for="name" value="Name:" />
+				<p:inputText id="name" value="#{controleMB.nome}" required="true"
+					label="Name" />
+			</pm:field>
+
+			<p:commandButton id="btn" value="Entrar"
+				actionListener="#{controleMB.entrar()}" update="@all" icon="check" />
+		</h:form>
+
+		<h:form id="idFormUserLogado" rendered="#{controleMB.isUsuarioLogado}">
+			<p:menu styleClass="ui-listview-inset ui-corner-all ui-group-theme-b">
+				<p:submenu label="Matérias">
+					<p:menuitem value="Desenvolvimento de aplicações distribuidas"
+						url="agenda.xhtml" />
+					<p:menuitem value="TCC" url="#" />
+				</p:submenu>
+
+			</p:menu>
+		</h:form> 
+	</f:view>
+</h:body>
+</html>

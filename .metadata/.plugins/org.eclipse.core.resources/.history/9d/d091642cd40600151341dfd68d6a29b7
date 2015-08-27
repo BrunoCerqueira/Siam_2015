@@ -1,0 +1,39 @@
+package example.topic;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class SwingBasic extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2603040007677913811L;
+	JPanel row = new JPanel();
+	GridLayout experimentLayout = new GridLayout(0,1);
+	JTextArea textArea = new JTextArea(5, 30);
+	JScrollPane scrollPane = new JScrollPane();
+	public void start(String operacao) {
+		
+		
+		setPreferredSize(new Dimension(450, 110));
+		
+		
+		JLabel l = new JLabel();
+		l.setText(operacao);
+//		row.add(l);
+//		row.setLayout(experimentLayout);
+//		textArea.add(row);
+		scrollPane.add(l);
+		add(scrollPane);
+		setSize(400, 400);
+		setVisible(true);
+	}
+
+	
+}

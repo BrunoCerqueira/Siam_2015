@@ -1,0 +1,5 @@
+INDEX VERSION 1.127
+/home/bruno/teste/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2777726256.index
+/prime-ejb-crud/src/main/java
+/home/bruno/teste/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/610048378.index
+/prime-ejb-crud/src/main/java

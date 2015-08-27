@@ -1,0 +1,21 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile" contentType="text/html">
+	<pm:page title="Hello World">
+
+		<pm:header title="Header" />
+		<pm:content>
+ Content
+ </pm:content>
+		<pm:buttonGroup>
+			<p:commandButton value="Yes" />
+			<p:commandButton value="No" />
+		</pm:buttonGroup>
+		<pm:inputSlider></pm:inputSlider>
+		<p:accordionPanel></p:accordionPanel>
+		<p:button></p:button>
+		<p:spotlight />
+	</pm:page>
+
+</f:view>

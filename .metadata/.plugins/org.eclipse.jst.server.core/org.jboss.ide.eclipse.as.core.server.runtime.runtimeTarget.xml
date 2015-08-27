@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="/home/bruno/Downloads/jboss-as-7.1.1.Final/modules/javax/faces/api/main/jboss-jsf-api_2.1_spec-2.0.1.Final.jar" runtime-id="JBoss 7.1 Runtime" source-attachment-path="/home/bruno/.m2/repository/org/jboss/spec/javax/faces/jboss-jsf-api_2.1_spec/2.0.1.Final/jboss-jsf-api_2.1_spec-2.0.1.Final-sources.jar"/>
+  <source-attachment entry="/home/bruno/Downloads/jboss-as-7.1.1.Final/modules/javax/jms/api/main/jboss-jms-api_1.1_spec-1.0.0.Final.jar" runtime-id="JBoss 7.1 Runtime" source-attachment-path="/home/bruno/.m2/repository/org/jboss/spec/javax/jms/jboss-jms-api_1.1_spec/1.0.0.Final/jboss-jms-api_1.1_spec-1.0.0.Final-sources.jar"/>
+</classpath>

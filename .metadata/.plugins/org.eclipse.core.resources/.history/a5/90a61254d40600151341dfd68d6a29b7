@@ -1,0 +1,28 @@
+package example.topic;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class SwingBasic extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2603040007677913811L;
+	JPanel row = new JPanel();
+	GridLayout experimentLayout = new GridLayout(0,1);
+	public void start(String operacao) {
+		
+		JLabel l = new JLabel();
+		l.setText(operacao);
+		row.add(l);
+		row.setLayout(experimentLayout);
+		
+		add(row);
+		setSize(400, 400);
+		setVisible(true);
+	}
+
+	
+}

@@ -1,0 +1,12 @@
+<classpath>
+  <container id="mobile!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bruno/teste/mobile/WebContent/WEB-INF/lib/primefaces-5.2.jar">
+      <source-attachment-path>/home/bruno/.m2/repository/org/primefaces/primefaces/5.2/primefaces-5.2-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="clienteHomeBroker!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bruno/teste/clienteHomeBroker/WebContent/WEB-INF/lib/model.jar">
+      <source-attachment-path>/homeBroker</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

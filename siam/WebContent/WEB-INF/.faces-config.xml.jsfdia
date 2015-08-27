@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="administrarPaciente::pages#administrarPaciente.xhtml"
+    NAME="output" PATH="pages/administrarPaciente.xhtml"
+    TARGET="rules:pages#administrarPaciente.xhtml"
+    TITLE="administrarPaciente" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="pesquisarPaciente::pages#pesquisarPaciente.xhtml" NAME="output1"
+    PATH="pages/pesquisarPaciente.xhtml"
+    TARGET="rules:pages#pesquisarPaciente.xhtml"
+    TITLE="pesquisarPaciente" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="graficoPaciente::pages#graficoPaciente.xhtml" NAME="output2"
+    PATH="pages/graficoPaciente.xhtml"
+    TARGET="rules:pages#graficoPaciente.xhtml" TITLE="graficoPaciente" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:pages#pesquisarPaciente.xhtml"
+  PATH="pages/pesquisarPaciente.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:pages#graficoPaciente.xhtml"
+  PATH="pages/graficoPaciente.xhtml" SHAPE="272,321,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:pages#administrarPaciente.xhtml"
+  PATH="pages/administrarPaciente.xhtml" SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

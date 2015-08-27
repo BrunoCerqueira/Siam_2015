@@ -1,0 +1,26 @@
+package managedBean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import entity.Pessoa;
+
+
+
+
+@ManagedBean
+@SessionScoped
+public class BaseBean {
+	private Pessoa pessoa;
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
+	
+
+}

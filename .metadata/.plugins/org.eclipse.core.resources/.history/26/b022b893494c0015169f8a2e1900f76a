@@ -1,0 +1,16 @@
+package managedBean;
+
+
+
+
+
+
+public class BaseBean {
+	public BaseBean() {
+		
+	}
+
+
+	
+
+}
